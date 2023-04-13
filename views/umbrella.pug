@@ -2,19 +2,16 @@ extends layout
 
 block content
   h1= title
-  - let results = [{Umbrella_color:"Red",Umbrella_length:"1.5ft",Umbrella_cost:"$20", Umbrella_usage:"Day"},{Umbrella_color:"Rainbow",Umbrella_length:"1.8ft",Umbrella_cost:"$10", Umbrella_usage:"Rain"},{Umbrella_color:"Yellow",Umbrella_length:"2.0ft",Umbrella_cost:"$30", Umbrella_usage:"Suuny Day & Rain"}]
+  -let items = results
   div(class="container-fluid")
     div(class="row")
-      each item,index in results
+      each item,index in items
         div(class="col-sm-2",onClick=`buy(${index})`)
-          p Color is #{item.Umbrella_color}
-          p Length is #{item.Umbrella_length}
-          p use in #{item.Umbrella_usage}
-          p Cost is #{item.Umbrella_cost}
-          //- Bonus Logic
+          p Umbrella_color:  #{item.Umbrella_color}
+          p Umbrella_length:  #{item.Umbrella_length}
+          p Umbrella_cost:  #{item.Umbrella_cost}
   script.
-    function buy(itr) {
-      itr = itr+1;
-      alert(`You Purchased Item ${itr}`);
+    function buy(N) {
+      N=N+1;
+      alert('You purchased item '+N);
     }
-    
