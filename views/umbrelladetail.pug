@@ -1,0 +1,20 @@
+extends layout
+block content
+    h1= title
+    if (toShow == null)
+        h2 No instance to delete
+    else
+        - let Umbrella_color = toShow.Umbrella_color
+        - let Umbrella_length = toShow.Umbrella_length
+        - let Umbrella_cost = toShow.Umbrella_cost
+        
+        div
+            div.row(id="umbrellaAttr")
+                div(class="umbrellaAttr mr-3") umbrella color is:
+                div #{Umbrella_color}
+            div.row
+                div(class="umbrellaAttr mr-3") umbrella length is:
+                div #{Umbrella_length}
+            div.row
+                div(class="umbrellaAttr mr-3") umbrella Cost is:
+                div #{Umbrella_cost}

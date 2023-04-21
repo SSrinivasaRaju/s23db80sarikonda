@@ -6,3 +6,9 @@ body {
 a {
   color: #00B7FF;
 }
+.umbrellaAttr {
+  background-color: rgb(223, 41, 56);
+  width: 120px;
+  margin : 20px;
+  }
+  
